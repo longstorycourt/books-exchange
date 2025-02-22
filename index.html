@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Books Exchange</title>
+        <title>Books 4 All</title>
         <link rel="stylesheet" href="styles.css" />
    
         <link
@@ -19,9 +19,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     </head>
-      <body class="nunito">
+      <body class="container container-fluid nunito ">
         <header class="mb-5">
-          <nav class="navbar fixed-top bg-primary navbar-expand-lg px-3 px-lg-5">
+          <nav class="navbar fixed-top bg-light navbar-expand-lg px-3 px-lg-5">
             <div class="container-fluid px-0">
               <a class="navbar-brand text-black" href="#">Book Exchange</a>
               <button
@@ -59,6 +59,9 @@
                   <li class="nav-item">
                     <a class="nav-link text-dark" href="#contact">Contact</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="text-light btn btn-dark" href="/signIn.html"><i class="fa-solid fa-user"></i></span> Log in / Sign up<span></a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -66,36 +69,66 @@
         </header>
         <main>
             <section class="bg-transparent">
-              <div class="">
-                  <div class="row g-0 mx-0 h-50" id="services">
-              
-                  </div>
+              <div class="row g-0 mx-0 h-50" id="services">
+          
               </div>
             </section>
-            <section class="bg-transparent">
-              <div class="">
-                  <div class="row g-0 mx-0 h-50" id="bookLists">
-                    <div class="col ">
-                      <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <hr class="mx-3 mx-md-4 mx-lg-5">
+            <section class="bg-transparent m-3 m-md-4 m-lg-5">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <h2>Books 4 Exchange</h2>
+                <a href="#" class="btn btn-dark btn-large">See More</a>
+              </div>
+              <hr class="w-25">
+              <div class="row g-0 mx-0 h-50" id="swapLists">
+                
+              </div>
+            </section>
+            <hr class="mx-3 mx-md-4 mx-lg-5">
+
+            <section class="bg-transparent m-3 m-md-4 m-lg-5">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <h2>Books 4 Sale</h2>
+                <a href="#" class="btn btn-dark btn-large">See More</a>
+              </div>
+              <hr class="w-25">
+              <div class="row g-0 mx-0 h-50" id="saleLists">
+                
               </div>
             </section>
         </main>
             
-        <hr>
-        <footer class="my-3 my-md-4 my-lg-5">
+        <hr class="mx-3 mx-md-4 mx-lg-5">
+        <footer class="mx-3 mx-md-4 mx-lg-5">
+            <div class="row my-3">
+              <div class="col-12 col-lg-6">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet optio provident excepturi, nesciunt voluptas minus quibusdam? Consequatur atque aut libero tenetur. Culpa qui excepturi doloribus perspiciatis distinctio expedita perferendis quos?</p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h3>Books 4 All</h3>
+                <ul class="list-unstyled">
+                  <li>About Us</li>
+                  <li>Our Services</li>
+                  <li>Privacy Policy</li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <form action="">
+                  <p class="text-center">Follow the lastest updates<br>With our newsletter</p>
+                  <div class="d-flex flex-column">
+                    <input class="mb-2 rounded-1 border-light" id="email" type="email" placeholder="you@example.com"/>
+                    <button class="btn btn-secondary mx-auto" style="width: fit-content;">Submit</button>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+          <hr class="">
           <p class="text-center">
             Books Exchange ©2025. All rights reserved.
           </p>
-      </footer>
+        </footer>
       <script src="index.js"></script>
 
       </body>
