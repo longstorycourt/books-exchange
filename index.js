@@ -10,7 +10,7 @@ let services =[
         cardTitle1: 'Register Your Books',
         cardTitle2: '',
         cardText: 'Register your books to find the ideal candidate to exchange them with.',
-        btnText: 'Register Your Book Now',
+        btnText: 'Register Now',
         link:'/bookListingForm.html'
     },
     {
@@ -20,7 +20,7 @@ let services =[
         cardTitle1: 'Browse Book Offers',
         cardTitle2: '',
         cardText: 'See the listed book offers up for grab.',
-        btnText: 'Check Out Book Offers',
+        btnText: 'Check Out',
         link:'/bookSwapPage.html'
     }
 ];
@@ -28,12 +28,13 @@ let services =[
 for (let i of services) {
 serviceContent.innerHTML += `
     <div class="col-12 col-lg-6">
-    <div class="card border-0 rounded-0 bg-dark text-white h-100">
-        <img class="card-img-body px-0 img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
-        <div class="card-img-overlay d-flex flex-column justify-content-end px-3 px-lg-5">
-            <h5 class="card-title"><span class="bg-secondary bg-opacity-10">${i.cardTitle1}</span><br> <span class="bg-dark bg-opacity-25">${i.cardTitle2}</span></h5>
-            <p class="card-text d-none d-md-block"><span class="bg-secondary bg-opacity-10">${i.cardText}</span></p>
-            <a class="btn btn-primary btn-lg" href="${i.link}" role="button" style="width: fit-content;">${i.btnText}</a>
+    <div class="card border-0 rounded-0 text-dark h-100">
+        <img class="card-img-body img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
+        <div class="card-img-overlay d-flex flex-column justify-content-end p-3 p-md-4 p-lg-5">
+            <!--bg-opacity needs fixing--!>
+            <h5 class="card-title"><span class="fw-bold" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h5>
+            <p class="card-text"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardText}</span></p>
+            <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #e3f2fd; color:#000;">${i.btnText}</a>
         </div>
         </div>
     </div>
