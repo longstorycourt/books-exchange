@@ -1,5 +1,6 @@
 
 const headerContent = document.getElementById("header");
+const footerContent = document.getElementById("footer");
 
 let navItems = [
     {
@@ -137,53 +138,31 @@ for(let i of swapItems){
 
 }
 
-let saleItems = [
-    {
-        id: `001`,
-        title: `Everything I know about love`,
-        img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
-        author: `Dolly Alderton`,
-        price: `$5.99`
-    },
-    {
-        id: `002`,
-        title: `Everything I know about love`,
-        img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
-        author: `Dolly Alderton`,
-        price: `$5.99`
-    },
-    {
-        id: `003`,
-        title: `Everything I know about love`,
-        img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
-        author: `Dolly Alderton`,
-        price: `$5.99`
-    },
-    {
-        id: `004`,
-        title: `Everything I know about love`,
-        img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
-        author: `Dolly Alderton`,
-        price: `$5.99`
-    }
-]
-for(let i of saleItems){
-    saleLists.innerHTML += `
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card ">
-            <img class="card-img-top" src="${i.img}" alt="A book">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start">
-                    <h5 class="card-title">${i.title}</h5> 
-                    <button class="border-0 bg-transparent"><i class="fa-regular fa-star"></i></button>
-                </div>
-                <p class="card-text author-name">by ${i.author}</p>
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <p class="lead text-secondary">${i.price}</p>
-                    <a href="#" class="btn btn-dark">Buy Now</a>
-                </div>
-            </div>
+footerContent.innerHTML += `
+    <hr class="">
+    <div class="row my-3">
+        <div class="col-12 col-lg-6">
+        <h3>About Us</h3>
+        <p><b>Books4All</b> is a community-built program dedicated to book lovers. The costly price of books shouldn't discourage literature enjoyers from reading. Exchanging books open people to different literary taste without spending more, and you might find friends who share this interest with you as well. </p>
         </div>
-    </div>`;
-
-}
+        <div class="col-12 col-md-6 col-lg-3">
+        <h3>Books4All</h3>
+        <ul class="list-unstyled">
+            <li>About Us</li>
+            <li>Our Services</li>
+            <li>Privacy Policy</li>
+        </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+        <form action="">
+            <h3 class="text-start text-md-center">Subscribe to our newsletter</h3>
+            <p class="text-start text-md-center">To follow the lastest updates</p>
+            <div class="d-flex flex-column">
+            <input class="mb-2 rounded-1 border-light" id="email" type="email" placeholder="you@example.com"/>
+            <button class="btn btn-dark me-auto ms-lg-auto py-1" style="width: fit-content;">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+`;
