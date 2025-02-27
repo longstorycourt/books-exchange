@@ -11,7 +11,7 @@ let navItems = [
     {
         id: `2`,
         navItem: `About`,
-        href:`#footer`
+        href:`#about-us`
     },
     {
         id: `3`,
@@ -26,14 +26,13 @@ let navItems = [
 ];
 let navItemsHtml = ``;
 for(let i of navItems){
-    navItemsHtml += `<a class="nav-items text-uppercase fw-bold text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>`;
+    navItemsHtml += `<a class="nav-items text-uppercase text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>`;
 }
 
 headerContent.innerHTML = `
     <nav class="navbar fixed-top navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container px-1 px-md-2 px-lg-3 mx-auto">
-            
-            <a class="navbar-brand link-dark fw-bold" href="#"><i class="fa-solid fa-book-open me-2"></i>Books4All</a>
+            <a class="navbar-brand link-dark" style="font-size: larger;" href="#"><i class="fa-solid fa-book-open me-2"></i>Books4All</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,7 +55,7 @@ let services =[
         alt: 'stacks of books',
         cardTitle1: 'Register Your Books',
         cardTitle2: '',
-        cardText: 'Register your books to find the ideal candidate to exchange them with.',
+        cardText: `To find the ideal candidate to exchange them with.`,
         btnText: 'Register Now',
         link:'/bookListingForm.html'
     },
@@ -79,9 +78,9 @@ serviceContent.innerHTML += `
         <img class="card-img-body img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
         <div class="card-img-overlay d-flex flex-column justify-content-end p-3 p-md-4 p-lg-5">
             <!--bg-opacity needs fixing--!>
-            <h5 class="card-title"><span class="fw-bold" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h5>
+            <h3 class="card-title"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h3>
             <p class="card-text"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardText}</span></p>
-            <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #e3f2fd; color:#000;">${i.btnText}</a>
+            <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #fff; color:#000;">${i.btnText}</a>
         </div>
         </div>
     </div>
@@ -119,6 +118,13 @@ let swapItems = [
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
     }
+    ,
+    {
+        id: `006`,
+        title: `Everything I know about love`,
+        img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
+        author: `Dolly Alderton`,
+    }
 ]
 for(let i of swapItems){
     swapLists.innerHTML += `
@@ -127,10 +133,10 @@ for(let i of swapItems){
             <img class="card-img-top h-50" src="${i.img}" alt="A book">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start">
-                    <h5 class="card-title">${i.title}</h5> 
+                    <h4 class="card-title">${i.title}</h4> 
                     <button class="border-0 bg-transparent"><i class="fa-regular fa-star"></i></button>
                 </div>
-                <p class="card-text author-name">by ${i.author}</p>
+                <p class="card-text author-name" style="font-size:large;">by ${i.author}</p>
                 <a href="#" class="btn btn-dark">Offer exchange</a>
             </div>
         </div>
@@ -139,29 +145,36 @@ for(let i of swapItems){
 }
 
 footerContent.innerHTML += `
-    <hr class="">
-    <div class="row my-3">
-        <div class="col-12 col-lg-6">
-        <h3>About Us</h3>
-        <p><b>Books4All</b> is a community-built program dedicated to book lovers. The costly price of books shouldn't discourage literature enjoyers from reading. Exchanging books open people to different literary taste without spending more, and you might find friends who share this interest with you as well. </p>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <h3>Books4All</h3>
+            <hr class="w-25">
+            <ul class="list-unstyled">
+                <li>About Us</li>
+                <li>Our Services</li>
+                <li>Privacy Policy</li>
+            </ul>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-        <h3>Books4All</h3>
-        <ul class="list-unstyled">
-            <li>About Us</li>
-            <li>Our Services</li>
-            <li>Privacy Policy</li>
-        </ul>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h3>Find Us On</h3>
+            <hr class="w-25">
+            <ul class="list-unstyled">
+                <li><a href="fb.com" class="text-decoration-none link-dark" title="Visit our Facebook Page" target="_blank" >Facebook</a></li>
+                <li><a href="instagram.com" class="text-decoration-none link-dark" title="Visit our Instagram Page" target="_blank">Instagram</a></li>
+                <li><a href="#" class="text-decoration-none link-dark" title="Visit our Twitter Page" target="_blank">Twitter</a></li>
+            </ul>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-        <form action="">
-            <h3 class="text-start text-md-center">Subscribe to our newsletter</h3>
-            <p class="text-start text-md-center">To follow the lastest updates</p>
-            <div class="d-flex flex-column">
-            <input class="mb-2 rounded-1 border-light" id="email" type="email" placeholder="you@example.com"/>
-            <button class="btn btn-dark me-auto ms-lg-auto py-1" style="width: fit-content;">Submit</button>
-            </div>
-        </form>
+        <div class="col-12 col-md-6 col-lg-4">
+            <form action="">
+                <h3 class="">Subscribe to our newsletter</h3>
+                <p class="d-none d-lg-block">To follow the lastest updates</p>
+                <hr class="w-25">
+
+                <div class="d-flex flex-column">
+                <input class="mb-2 rounded-1 border-light" id="email" type="email" placeholder="you@example.com"/>
+                <button class="btn btn-dark me-auto ms-lg-auto py-1" style="width: fit-content;">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
     </div>
