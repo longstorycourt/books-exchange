@@ -21,19 +21,47 @@
     </head>
       <body class="container container-fluid nunito  mt-3 mt-md-4 mt-5 mx-auto">
         <form action="" class="border border-secondary border-2 rounded-1 p-3">
+            <div>
+              <h2>Book Register Form</h2>
+              <small class="text-muted">for Book Swapping</small>
+            </div> 
             <div class="row">
             <div class="col-7">
             <div class="mb-3">
               <label for="bookTitle" class="form-label">Title</label>
-              <input type="text" class="form-control" id="bookTitle" aria-describedby="emailHelp">
-              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              <input type="text" class="form-control" id="bookTitle" required>
             </div>
             <div class="mb-3">
               <label for="bookAuthor" class="form-label">Author</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
+              <input type="text" class="form-control" id="bookAuthor" required>
             </div>
             
-              
+            <div class="mb-3 d-flex justify-content-start">
+              <div class="me-3">
+                <label for="bookAuthor" class="form-label">Condition: </label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  New
+                </label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Used
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description (Optional)</label>
+              <textarea rows="3" class="form-control" id="description" placeholder="Write a description for your book. e.g. Everything I know about love by Dolly Alderton is about a British girl..."></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message (Optional)</label>
+              <textarea rows="3" class="form-control" id="message" placeholder="Leave a specific message/requirement for others. e.g. I am looking for a romance book to swap with..."></textarea>
+            </div>
+
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Remain anonymous</label>
