@@ -44,8 +44,6 @@ headerContent.innerHTML = `
         </div>
     </nav>`;
 
-
-
 footerContent.innerHTML += `
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
@@ -99,17 +97,21 @@ let bookDetail = {
 
 bookDetailsContent.innerHTML = `
     <div class="col-12 col-lg-5">
-        <img id="bookImage" src="${bookDetail.img}" class="card-img-top rounded-0" alt="${bookDetail.alt}">
+        <img id="bookImage" src="${bookDetail.img}" class="card-img rounded-0" alt="${bookDetail.alt}">
     </div>
     
-    <div class="col-12 col-lg-7 d-flex flex-column">
-        <h2>${bookDetail.title}</h3>
-        <p>by <b>${bookDetail.author}</b></p>
-        <p><b>Condition</b>: ${bookDetail.cond}</p>
-        <p><b>Description</b>: ${bookDetail.desc}</p>
-        <p><b>Message</b>: ${bookDetail.msg}</p>
-        <p><b>Mode of Delivery</b>: ${bookDetail.modeofDel}</p>
-        <a href="#" class="w-25 btn btn-primary btn-lg me-auto mx-lg-auto">Offer exchange</a>
+    <div class="col-12 col-lg-7 d-flex flex-column ">
+        <div class="">
+            <h2 class="fw-bold">${bookDetail.title}</h2>
+            <p>by <b>${bookDetail.author}</b></p>
+            <p><b>Condition</b>: ${bookDetail.cond}</p>
+            <p><b>Description</b>: ${bookDetail.desc}</p>
+            <p><b>Message</b>: ${bookDetail.msg}</p>
+            <p><b>Mode of Delivery</b>: ${bookDetail.modeofDel}</p>
+        </div>
+        <div class="d-flex mt-3 mt-md-4 mt-lg-5">
+            <a href="#" class="w-25 btn btn-dark btn-lg me-auto mx-lg-auto">Offer exchange</a>
+        </div>
     </div>`
 
 
@@ -150,3 +152,5 @@ bookDetailsContent.innerHTML = `
         </div>`;
     
     }
+
+    

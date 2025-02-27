@@ -51,6 +51,7 @@ let swapItems = [
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `002`,
@@ -115,11 +116,13 @@ for(let i = 0; i < 9; i++){
             <img class="card-img-top h-50" src="${swapItems[i].img}" alt="A book">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start">
-                    <h5 class="card-title">${swapItems[i].title}</h5> 
+                    <h3 class="card-title">${swapItems[i].title}</h3> 
                     <button class="border-0 bg-transparent"><i class="fa-regular fa-star"></i></button>
                 </div>
-                <p class="card-text author-name">by ${swapItems[i].author}</p>
-                <a href="#" class="btn btn-dark">Offer exchange</a>
+                <div class="d-flex justify-content-between">
+                    <small class="card-text author-name" >by ${swapItems[i].author}</small>
+                    <a href="${swapItems[i].link}" class="btn btn-dark">View details</a>
+                </div>
             </div>
         </div>
     </div>`;
