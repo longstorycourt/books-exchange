@@ -4,13 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register a book</title>
-        <link rel="stylesheet" href="listStyle.css" />
-   
-        <link
-          href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/css files/listStyle.css" />
+        <link rel="stylesheet" href="/css files/styles.css" />   
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           rel="stylesheet"
@@ -19,76 +17,110 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     </head>
-      <body class="container container-fluid nunito  mt-3 mt-md-4 mt-5 mx-auto">
+      <body class="container-fluid nunito  mt-3 mt-md-4 mt-5 mx-auto">
         <header id="header" style="background-color: #e3f2fd;">
           
         </header>
-        <form action="" class="border border-secondary border-2 rounded-1 p-3">
-            <div>
-              <h2>Book Register Form</h2>
-              <small class="text-muted">for Book Swapping</small>
-            </div> 
-            <div class="row">
-            <div class="col-7">
-            <div class="mb-3">
-              <label for="bookTitle" class="form-label">Title</label>
-              <input type="text" class="form-control" id="bookTitle" required>
-            </div>
-            <div class="mb-3">
-              <label for="bookAuthor" class="form-label">Author</label>
-              <input type="text" class="form-control" id="bookAuthor" required>
-            </div>
-            
-            <div class="mb-3 d-flex justify-content-start">
-              <div class="me-3">
-                <label for="bookAuthor" class="form-label">Condition: </label>
-              </div>
-              <div class="form-check me-3">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                <label class="form-check-label" for="flexRadioDefault1">
-                  New
-                </label>
-              </div>
-              <div class="form-check me-3">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Used
-                </label>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="description" class="form-label">Description (Optional)</label>
-              <textarea rows="3" class="form-control" id="description" placeholder="Write a description for your book. e.g. Everything I know about love by Dolly Alderton is about a British girl..."></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message (Optional)</label>
-              <textarea rows="3" class="form-control" id="message" placeholder="Leave a specific message/requirement for others. e.g. I am looking for a romance book to swap with..."></textarea>
-            </div>
-
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Remain anonymous</label>
-            </div>
-        </div>
-            <div class="col-5">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                  
-                    <div class="card-body">
-                      <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                </div>
+        <main class="container px-1 px-md-2 px-lg-3 py-3 mx-auto">
+            <section class="bg-transparent py-3 py-md-4 py-lg-5 my-3">
+              <form action="" class="border border-secondary border-2 rounded-1 p-3">
+                <div class="my-3" >
+                  <h2 class="my-0">Book Register Form</h2>
+                  <small class="text-muted my-0">for Book Swapping</small>
+                  <hr class="w-25">
+                </div> 
+                <div class="row my-3 gy-3">
+                  <div class="col-12 col-lg-5">
+                    <div class="card">
+                      <img id="bookImage" src="https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png" class="card-img-top" alt="Placeholder for Image">
+                      
+                      <div class="card-body">
+                        <div class="input-group mb-3">
+                          <input id="bookImageFile" type="file" class="form-control" id="inputGroupFile02">
+                          <button class="input-group-text" for="inputGroupFile02" onclick="uploadPicture()">Upload</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                
-            </div>
+
+                    <div class="col-12 col-lg-7">
+                    <div class="mb-3">
+                      <label for="bookTitle" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="bookTitle" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="bookAuthor" class="form-label">Author</label>
+                      <input type="text" class="form-control" id="bookAuthor" required>
+                    </div>
+                    
+                    <div class="mb-3 d-flex justify-content-start">
+                      <div class="me-3">
+                        <label for="condition" class="form-label">Condition: </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="condition" id="newCondition" value="newCondition" checked>
+                        <label class="form-check-label" for="newCondition" >
+                          New
+                        </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="condition" id="usedCondition" value="usedCondition" >
+                        <label class="form-check-label" for="usedCondition">
+                          Used
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="description" class="form-label">Description (Optional)</label>
+                      <textarea rows="3" class="form-control" id="description" placeholder="Write a description for your book. e.g. Everything I know about love by Dolly Alderton is about a British girl..."></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message (Optional)</label>
+                      <textarea rows="3" class="form-control" id="message" placeholder="Leave a specific message/requirement for others. e.g. I am looking for a romance book to swap with..."></textarea>
+                    </div>
+
+                    <div class="mb-3 d-flex justify-content-start">
+                      <div class="me-3">
+                        <label for="modeOfDelivery" class="form-label">Mode of Delivery: </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="modeOfDelivery" id="pickUp" value="pickUp" checked>
+                        <label class="form-check-label" for="pickUp">
+                          Pick Up
+                        </label>
+                      </div>
+                      <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="modeOfDelivery" id="delivery" value="delivery" >
+                        <label class="form-check-label" for="delivery">
+                          Delivery
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="anon" value="anon" name="anon">
+                      <label class="form-check-label" for="anon">Remain anonymous</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" onclick="submit()">Submit</button>
+                  </div>
+                    
+                  </div>
+                </form>
+              </section>
+              <hr/>
+          </main>
+      
+        <footer id="footer" class="container px-1 px-md-2 px-lg-3 mx-auto pb-3 pb-md-4 pb-lg-5">
+          <!-- Footer -->
+        </footer>
+        <script src="/js files/bookListingForm.js"></script>
+        <div class="pt-2 my-0" style="background-color:#e3f2fd;">
+            <p class="text-center pb-2 mb-0">
+              Books4All &copy;2025. All rights reserved.
+            </p>
         </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-
-      <script src="index.js"></script>
-
       </body>
 </html>
     
