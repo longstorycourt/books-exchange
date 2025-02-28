@@ -8,20 +8,20 @@ let navItems = [
         navItem: `Home`,
         href:`#`
     },
-    // {
-    //     id: `2`,
-    //     navItem: `About`,
-    //     href:`#about-us`
-    // },
+    {
+        id: `2`,
+        navItem: `About`,
+        href:`#`
+    },
     {
         id: `3`,
         navItem: `Books4Swap`,
-        href:`#books4Swap`
+        href:`#`
     },
     {
         id: `4`,
         navItem: `Contact`,
-        href:`#footer`
+        href:`#`
     },
 ];
 let navItemsHtml = ``;

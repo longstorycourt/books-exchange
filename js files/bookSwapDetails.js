@@ -110,9 +110,9 @@ bookDetailsContent.innerHTML = `
             <p><b>Mode of Delivery</b>: ${bookDetail.modeofDel}</p>
         </div>
         <div class="d-flex mt-3 mt-md-4 mt-lg-5">
-            <a href="#" class="w-25 btn btn-dark btn-lg me-auto mx-lg-auto">Offer exchange</a>
+            <button class="w-25 btn btn-dark btn-lg me-auto mx-lg-auto" data-bs-toggle="modal" data-bs-target="reg-modal" type="button">Offer exchange</button>
         </div>
-    </div>`
+    </div>`;
 
 
     let relatedItems = [

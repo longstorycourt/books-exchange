@@ -2,6 +2,10 @@
 const headerContent = document.getElementById("header");
 const footerContent = document.getElementById("footer");
 
+let serviceContent = document.getElementById("services");
+let swapLists = document.getElementById("swapLists");
+let saleLists = document.getElementById("saleLists");
+
 let navItems = [
     {
         id: `1`,
@@ -26,7 +30,9 @@ let navItems = [
 ];
 let navItemsHtml = ``;
 for(let i of navItems){
-    navItemsHtml += `<a class="nav-items text-uppercase text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>`;
+    navItemsHtml += `
+        <a class="nav-item text-uppercase text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>
+   `;
 }
 
 headerContent.innerHTML = `
@@ -44,10 +50,6 @@ headerContent.innerHTML = `
         </div>
     </nav>`;
 
-let serviceContent = document.getElementById("services");
-let swapLists = document.getElementById("swapLists");
-let saleLists = document.getElementById("saleLists");
-
 let services =[
     {
         id: '1',
@@ -57,7 +59,7 @@ let services =[
         cardTitle2: '',
         cardText: `To find the ideal candidate to exchange them with.`,
         btnText: 'Register Now',
-        link:'/bookListingForm.html'
+        link:'./html files/bookListingForm.html'
     },
     {
         id: '2',
@@ -67,24 +69,24 @@ let services =[
         cardTitle2: '',
         cardText: 'See the listed book offers up for grab.',
         btnText: 'Check Out',
-        link:'/bookSwapPage.html'
+        link:'./html files/bookSwapPage.html'
     }
 ];
 
 for (let i of services) {
 serviceContent.innerHTML += `
-    <div class="col-12 col-lg-6">
-    <div class="card border-0 rounded-0 text-dark h-100">
-        <img class="card-img-body img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
-        <div class="card-img-overlay d-flex flex-column justify-content-end p-3 p-md-4 p-lg-5">
-            <!--bg-opacity needs fixing--!>
-            <h3 class="card-title"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h3>
-            <p class="card-text"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardText}</span></p>
-            <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #fff; color:#000;">${i.btnText}</a>
+        <div class="col-12 col-lg-6">
+        <div class="card border-0 rounded-0 text-dark h-100">
+            <img class="card-img-body img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-3 p-md-4 p-lg-5">
+                <!--bg-opacity needs fixing--!>
+                <h3 class="card-title"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h3>
+                <p class="card-text"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardText}</span></p>
+                <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #fff; color:#000;">${i.btnText}</a>
+            </div>
+            </div>
         </div>
-        </div>
-    </div>
-`;
+    `;
 }
 
 let swapItems = [
@@ -126,6 +128,7 @@ let swapItems = [
         author: `Dolly Alderton`,
     }
 ]
+
 for(let i of swapItems){
     swapLists.innerHTML += `
     <div class="col-12 col-md-6 col-lg-4">
@@ -136,8 +139,10 @@ for(let i of swapItems){
                     <h4 class="card-title">${i.title}</h4> 
                     <button class="border-0 bg-transparent"><i class="fa-regular fa-star"></i></button>
                 </div>
-                <p class="card-text author-name" style="font-size:large;">by ${i.author}</p>
-                <a href="#" class="btn btn-dark">Offer exchange</a>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="card-text author-name" style="font-size:large;">by ${i.author}</p>
+                    <a href="#" class="btn btn-dark">View Details</a>
+                </div>
             </div>
         </div>
     </div>`;
