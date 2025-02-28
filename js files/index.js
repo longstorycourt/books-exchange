@@ -4,7 +4,6 @@ const footerContent = document.getElementById("footer");
 
 let serviceContent = document.getElementById("services");
 let swapLists = document.getElementById("swapLists");
-let saleLists = document.getElementById("saleLists");
 
 let navItems = [
     {

@@ -79,6 +79,7 @@ footerContent.innerHTML += `
 </div>
 </div>
 `;
+
 const title = document.getElementById(`bookTitle`);
 const author = document.getElementById(`bookAuthor`);
 const condition = document.querySelector('input[name="condition"]:checked');
@@ -87,6 +88,7 @@ const msg = document.getElementById(`message`);
 const modeOfDel  = document.querySelector('input[name="modeOfDelivery"]:checked');
 const anon = document.getElementById("anon");
 
+// not working
 function submit(){
     let titleValue = title.value;
     let authorValue = author.value;
@@ -95,7 +97,6 @@ function submit(){
     let msgValue = title.value;
     let modeOfDelValue = modeOfDel.value;
     let anonValue = anon.value;
-
 
     let msg = `Title: ${titleValue}\nAuthor: ${authorValue}\nCondition: ${condValue}\nDescription: ${descValue}\nMessage: ${msgValue}\nMode of Delivery:${modeOfDelValue}\nAnonymous:${anonValue}`;
 
