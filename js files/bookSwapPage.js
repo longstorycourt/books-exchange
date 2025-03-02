@@ -36,7 +36,7 @@ for(let i of navItems){
 headerContent.innerHTML = `
     <nav class="navbar fixed-top navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container px-1 px-md-2 px-lg-3 mx-auto">
-            <a class="navbar-brand link-dark" style="font-size: larger;" href="#"><i class="fa-solid fa-book-open me-2"></i>Books4All</a>
+            <a class="navbar-brand link-dark" style="font-size: larger;" href="../index.html"><i class="fa-solid fa-book-open me-2"></i>Books4All</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
