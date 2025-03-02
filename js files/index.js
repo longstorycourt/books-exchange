@@ -30,8 +30,10 @@ let navItems = [
 let navItemsHtml = ``;
 for(let i of navItems){
     navItemsHtml += `
-        <a class="nav-item text-uppercase text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>
-   `;
+        <div class="nav-item">
+            <a class="nav-link text-uppercase mx-0" href="${i.href}">${i.navItem}</a>
+        </div>
+        `;
 }
 
 headerContent.innerHTML = `
@@ -42,9 +44,9 @@ headerContent.innerHTML = `
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav-underline align-items-lg-center align-content-start">
-                ${navItemsHtml}
-            </div>
+                <div class="navbar-nav nav-underline align-items-lg-center align-content-start">
+                    ${navItemsHtml}
+                </div>
             </div>
         </div>
     </nav>`;
@@ -79,8 +81,8 @@ serviceContent.innerHTML += `
             <img class="card-img-body img-fluid h-100 object-fit-cover" src="${i.img}" alt="${i.alt}" style="max-height:500px;">
             <div class="card-img-overlay d-flex flex-column justify-content-end p-3 p-md-4 p-lg-5">
                 <!--bg-opacity needs fixing--!>
-                <h3 class="card-title"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle1}</span><br> <span class="" style="background-color: #e3f2fd; color:#000;">${i.cardTitle2}</span></h3>
-                <p class="card-text"><span class="" style="background-color: #e3f2fd; color:#000;">${i.cardText}</span></p>
+                <h3 class="card-title"><span class="" style="background:rgba(104,104,104, .5); color:#fff; ">${i.cardTitle1}</span><br> <span class="" style="background:rgba(104,104,104, .5); color:#fff; ">${i.cardTitle2}</span></h3>
+                <p class="card-text"><span class="" style="background:rgba(104,104,104, .5); color:#fff; ">${i.cardText}</span></p>
                 <a class="btn btn-lg fw-bold" href="${i.link}" role="button" style="width: fit-content; background-color: #fff; color:#000;">${i.btnText}</a>
             </div>
             </div>

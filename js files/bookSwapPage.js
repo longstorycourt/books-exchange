@@ -26,7 +26,11 @@ let navItems = [
 ];
 let navItemsHtml = ``;
 for(let i of navItems){
-    navItemsHtml += `<a class="nav-items text-uppercase text-dark mx-0 mx-lg-2 text-decoration-none" href="${i.href}">${i.navItem}</a>`;
+    navItemsHtml += `
+        <div class="nav-item">
+            <a class="nav-link text-uppercase mx-0" href="${i.href}">${i.navItem}</a>
+        </div>
+            `;
 }
 
 headerContent.innerHTML = `
@@ -37,9 +41,9 @@ headerContent.innerHTML = `
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav-underline align-items-lg-center align-content-start">
-                ${navItemsHtml}
-            </div>
+                <div class="navbar-nav nav-underline align-items-lg-center align-content-start">
+                    ${navItemsHtml}
+                </div>
             </div>
         </div>
     </nav>`;
