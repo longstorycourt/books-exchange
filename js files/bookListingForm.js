@@ -11,12 +11,12 @@ let navItems = [
     {
         id: `2`,
         navItem: `About`,
-        href:`#`
+        href:`books-exchange.github.io/html files/index.html#about-us`
     },
     {
         id: `3`,
         navItem: `Books4Swap`,
-        href:`/html files/bookSwapPage.html`
+        href:`books-exchange.github.io/html files/bookSwapPage.html`
     },
     {
         id: `4`,

@@ -62,54 +62,63 @@ let swapItems = [
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `003`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `004`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `005`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `006`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `007`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `008`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `009`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     },
     {
         id: `010`,
         title: `Everything I know about love`,
         img: `https://i.pinimg.com/736x/74/ba/8c/74ba8c684044bc9097393554394f3cf7.jpg`,
         author: `Dolly Alderton`,
+        link: `bookSwapDetails.html`
     }
 
 ]
