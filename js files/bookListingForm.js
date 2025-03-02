@@ -16,7 +16,7 @@ let navItems = [
     {
         id: `3`,
         navItem: `Books4Swap`,
-        href:`bookSwapPage.html`
+        href:`/bookSwapPage.html`
     },
     {
         id: `4`,
